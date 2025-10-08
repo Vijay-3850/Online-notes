@@ -1,1 +1,35 @@
-// frontend/css/styles.css
+/* styles.css - Custom styles for Online Notes App */
+
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar customization */
+nav {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effect */
+.note-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+button:active {
+  transform: scale(0.97);
+}
+
+/* Form input focus */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #2563eb; /* Tailwind blue-600 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
