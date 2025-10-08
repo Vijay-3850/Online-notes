@@ -1,0 +1,1 @@
+// frontend/js/notes.js
