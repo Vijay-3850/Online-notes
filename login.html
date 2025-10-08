@@ -1,1 +1,45 @@
-// frontend/login.html
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Notes App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full">
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-blue-600 text-center mb-6">Login to Notes App</h1>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label for="email" class="block text-left text-gray-700 font-medium">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required
+          class="w-full border rounded px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="password" class="block text-left text-gray-700 font-medium">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required
+          class="w-full border rounded px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <button type="submit" 
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        Login
+      </button>
+    </form>
+
+    <!-- Register Link -->
+    <p class="text-sm text-gray-600 mt-4 text-center">
+      Don’t have an account?
+      <a href="register.html" class="text-blue-600 hover:underline">Register</a>
+    </p>
+  </div>
+
+  <!-- Link to JS file -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
