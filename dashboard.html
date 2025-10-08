@@ -1,1 +1,50 @@
-// frontend/dashboard.html
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">📒 My Notes</h1>
+    <button id="logoutBtn" class="bg-red-500 px-3 py-1 rounded hover:bg-red-600">
+      Logout
+    </button>
+  </nav>
+
+  <!-- Main container -->
+  <div class="container mx-auto mt-8 px-4">
+    
+    <!-- Add Note Form -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-lg font-semibold mb-4">Add a New Note</h2>
+      <form id="noteForm" class="space-y-4">
+        <input type="text" id="title" placeholder="Note Title" 
+               class="w-full border rounded px-3 py-2" required>
+        <textarea id="content" placeholder="Write your note here..." 
+                  class="w-full border rounded px-3 py-2" required></textarea>
+        <input type="text" id="tags" placeholder="Tags (comma separated)" 
+               class="w-full border rounded px-3 py-2">
+        <button type="submit" 
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Add Note
+        </button>
+      </form>
+    </div>
+
+    <!-- Notes List -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Your Notes</h2>
+      <div id="notesList" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Notes will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/notes.js"></script>
+</body>
+</html>
